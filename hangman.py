@@ -26,19 +26,19 @@ while attempts > 0:
     print("Guessed letters:", guessed)
 
     if "_" not in display:
-        print("\n🎉 You Win,", name, "!")
+        print("\n You Win,", name, "!")
         break
 
     guess = input("Enter a letter: ").lower()
 
     if guess in guessed:
-        print("⚠️ Already guessed!")
+        print(" Already guessed!")
     elif guess in word:
-        print("✅ Correct!")
+        print(" Correct!")
         guessed.append(guess)
     else:
         attempts -= 1
-        print("❌ Wrong! Chances left:", attempts)
+        print(" Wrong! Chances left:", attempts)
 
 if attempts == 0:
-    print("\n😢 You Lost,", name, "! The word was:", word)
+    print("\n You Lost,", name, "! The word was:", word)
